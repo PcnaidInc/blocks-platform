@@ -74,6 +74,10 @@ Our staging site is [HERE](https://githubnext-blocks-staging.azurewebsites.net/g
 2. Click "Swap" button
 3. Then swap" again on the sidebar
 
+## CI
+
+A [CI workflow](.github/workflows/ci.yml) runs on pull requests and pushes to `main`. It checks formatting (`prettier --check`), TypeScript types (`tsc --noEmit`), and that the Next.js project builds.
+
 ## Updating Stars List
 
 Occasionally we'll need to update the list of GitHub Stars. To make this easier, I've added a script to package.json `stars:update` which fetches the list of stars from `https://api-stars.github.com/` and writes them to a file on disk, `stars.json`.
